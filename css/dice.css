@@ -1,0 +1,216 @@
+html{
+    
+    background: rgb(33,211,213);
+background: linear-gradient(276deg, rgba(33,211,213,1) 0%, rgba(0,84,215,1) 100%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    
+}
+.game {
+    display: flex;
+    max-width: 80%;
+    margin: 5em auto;
+    background-color: none;
+    
+    height: auto;
+    border: none;
+    justify-content: center;
+    position: relative;
+   box-shadow:10px 5px 5px #777777;
+    
+}
+.player-1 , .player-2 {
+    width: 50%;
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    position: relative;
+   
+}
+
+.player-name{
+    margin-top: 2em;
+    padding: 1em 0;
+    text-align: center;
+    font-family: monospace;
+    font-weight: lighter;
+    font-size:4em;
+    letter-spacing: 2px;
+    color: rgb(184, 184, 184);
+    
+}
+#name-1 , #name-2 {
+    position: relative;
+    
+}
+.player-score{
+    font-family: cursive;
+    font-weight: lighter;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 2px;
+    color: red;
+    
+}
+.active {
+    background: rgb(232,232,232);
+background: linear-gradient(145deg, rgba(232,232,232,1) 0%, rgba(168,222,237,1) 47%, rgba(113,213,242,1) 78%, rgba(5,196,251,1) 100%);
+    
+}
+.active .player-name{
+    
+    font-weight: bolder;
+    color: black;
+}
+.active .player-name::after {
+    content: "\2022";
+    color: red;
+    font-size: 40px;
+    position: absolute;
+    top: 55px;
+    right: 108px;
+    
+        
+}
+.current-panel {
+    width: 150px;
+    height: 100px;
+    margin: 35% auto;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-weight: lighter;
+    font-size:2em;
+    
+}
+.current {
+    padding-bottom: 10px;
+}
+.btn {
+    background-color:transparent;
+    border: none;
+    font-size: 2em;
+    font-family: cursive;
+    position: absolute;
+    
+}
+#dice {
+    position: absolute;
+    top: 40%;
+    display: block;
+}
+
+    
+    
+#new-game{
+    top: 10%; 
+}
+#roll {
+    top:65%;
+}
+#hold{
+    top: 80%;
+}
+#new-game:hover , #roll:hover , #hold:hover {
+   background: rgb(33,211,213);
+background: linear-gradient(276deg, rgba(33,211,213,1) 0%, rgba(0,84,215,1) 100%);
+    color: white;
+    cursor: pointer;
+}
+.winner {
+    background: rgb(232,232,232);
+background: linear-gradient(145deg, rgba(232,232,232,1) 0%, rgba(168,222,237,1) 47%, rgba(113,213,242,1) 78%, rgba(5,196,251,1) 100%);
+animation-name: example1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.winner .player-name {
+    color: red;
+    font-weight:900;
+    letter-spacing: 16px;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+    
+    
+}
+@-webkit-keyframes example {
+    from {color: red;}
+    
+    to {color: rgb(241, 238, 31);}
+    
+  }
+  
+  
+  @keyframes example {
+    from {color: red;}
+    
+    to {color: rgb(241, 238, 31);}
+    
+  }
+  @-webkit-keyframes example1 {
+    from { background: rgb(232,232,232);
+        background: linear-gradient(145deg, rgba(232,232,232,1) 0%, rgba(168,222,237,1) 47%, rgba(113,213,242,1) 78%, rgba(5,196,251,1) 100%);}
+    
+    to {background: rgb(80,217,255);
+        background: linear-gradient(145deg, rgba(80,217,255,1) 0%, rgba(233,233,233,1) 100%);}
+    
+  }
+  @keyframes example1 {
+    from { background: rgb(232,232,232);
+        background: linear-gradient(145deg, rgba(232,232,232,1) 0%, rgba(168,222,237,1) 47%, rgba(113,213,242,1) 78%, rgba(5,196,251,1) 100%);}
+    
+    to {background: rgb(80,217,255);
+        background: linear-gradient(145deg, rgba(80,217,255,1) 0%, rgba(233,233,233,1) 100%);}
+    
+  }
+
+@media only screen and (max-width: 600px) {
+    .game {
+        flex-direction: column;
+        max-width: 90%;
+        width: 90%;
+        height: auto;
+        
+        
+    }
+    .player-1 , .player-2{
+        width: 100%;
+        max-width: 100%;
+        
+    }
+    img{
+        top: 43%;
+        left: 35%;
+        
+       
+        
+        
+}
+    #new-game {
+        top: 5%;
+        left: 20%;
+    }
+#roll {
+    top:51%;
+    left: 25%;
+    
+}
+#hold{
+    top: 55%;
+    left: 30%;
+}
+.active .player-name::after {
+    
+    top: 55px;
+    right: 70px;
+    
+        
+}
+}
